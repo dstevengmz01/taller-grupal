@@ -9,7 +9,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const respuesta = await fetch("http://localhost:3000/api/login", {
+      const respuesta = await fetch("http://localhost:6502/apiu/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ correo, contrasena }),
@@ -21,7 +21,7 @@ function Login() {
         localStorage.setItem("token", data.token);
         alert("Bienvenido, " + data.usuario.nombre);
       } else {
-        setError(data.mensaje); 
+        setError(data.mensaje);
       }
     } catch (err) {
       setError("Error al conectar con el servidor", err);
