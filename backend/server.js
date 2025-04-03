@@ -20,12 +20,8 @@ app.use(express.json());
 //ruta
 const ReservaRouter = require('./router/reservaRouter');
 const usuarioRoutes = require("./router/usuarioRouter");
-app.use('/apireserva',ReservaRouter);
-app.use('/apiusuario',usuarioRoutes);
-
-
-
-
+app.use('/apir',ReservaRouter);
+app.use('/apiu',usuarioRoutes);
 
 //server 
 const PORT=process.env.PORT;

@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import App from "./App";
 
 function Reserva() {
   const [user, setUser] = useState([]);
   const listUser = async () => {
     try {
-      const respuesta = await axios.get("http://localhost:6502/apireserva/");
+      const respuesta = await axios.get("http://localhost:6502/apir/");
       console.log(respuesta);
       setUser(respuesta.data);
     } catch (e) {

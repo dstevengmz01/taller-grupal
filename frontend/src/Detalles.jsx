@@ -5,14 +5,12 @@ function UserDetail() {
   const { selectedUser } = useContext(UserContext);
   return (
     <div>
-      <h1>Detalles</h1>
+      <h1>detalle usuarios</h1>
       <p>
-        <strong>ID: </strong>
-        {selectedUser.id}
+        <strong>{selectedUser.id}</strong>
       </p>
       <p>
-        <strong>Nombre: </strong>
-        {selectedUser.nombre}
+        <strong>{selectedUser.nombre}</strong>
       </p>
     </div>
   );

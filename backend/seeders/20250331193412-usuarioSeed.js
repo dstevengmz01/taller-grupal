@@ -17,11 +17,15 @@ module.exports = {
       [
         {
           nombre: "Darwin",
+          correo: "ds@gmail.com",
+          contrasena: "123456789d",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           nombre: "Pedro Loro",
+          correo: "dsd@gmail.com",
+          contrasena: "123456789d",
           createdAt: new Date(),
           updatedAt: new Date(),
         },

@@ -16,7 +16,7 @@ module.exports = {
       "reservas",
       [
         {
-          usuario_id: 13,
+          usuario_id: 1,
           fechaReserva: "2020-01-02",
           lugar: "Casa",
           nombreReserva: "El senor x",
@@ -24,7 +24,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          usuario_id: 13,
+          usuario_id: 1,
           fechaReserva: "2020-01-02",
           lugar: "Casa",
           nombreReserva: "El senor x",
