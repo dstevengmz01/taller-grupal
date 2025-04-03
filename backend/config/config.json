@@ -1,0 +1,27 @@
+{
+  "development": {
+    "username": "root",
+    "password": "sena",
+    "database": "actividadxd",
+    "host": "localhost",
+    "dialect": "mysql",
+    "port": 3306
+  },
+
+  "test": {
+    "username": "root",
+    "password": "sena",
+    "database": "actividadxd",
+    "host": "localhost",
+    "dialect": "mysql",
+    "port": 3306
+  },
+  "production": {
+    "username": "root",
+    "password": "sena",
+    "database": "actividadxd",
+    "host": "localhost",
+    "dialect": "mysql",
+    "port": 3306
+  }
+}
