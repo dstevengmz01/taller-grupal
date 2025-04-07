@@ -1,37 +1,39 @@
 import axios from "axios";
-import { useEffect, useState, createContext } from "react";
+import { useEffect, useState, createContext, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Reserva from "./reserva";
 
 const UserContext = createContext();
+
+const useUserContext = () => useContext(UserContext);
+
+
 function Usuarios() {
   const [users, setUsers] = useState([]);
-  const [selectedUser, setselectedUser] = useState(null);
+  const {selectedUser, setSelectedUser}  = useUserContext();
   const navigate = useNavigate();
-  const listUser = async () => {
-    try {
-      const respuesta = await axios.get("http://localhost:6502/apiu");
-      console.log(respuesta);
-      setUsers(respuesta.data);
-    } catch (e) {
-      console.log("ERROR AL OBTENER LOS DATOS", e);
-    }
-  };
 
-  const selectUser = (usuario) => {
-    setselectedUser(usuario);
-    localStorage.setItem("selectedUser", JSON.stringify(usuario));
-    navigate("/Detalles");
-  };
 
   useEffect(() => {
-    const guardado = localStorage.getItem("selectedUser");
-    if (guardado) setselectedUser(JSON.parse(guardado));
+      const listUser = async () => {
+        try {
+          const respuesta = await axios.get("http://localhost:6502/apiu");
+          console.log(respuesta);
+          setUsers(respuesta.data);
+        } catch (e) {
+          console.log("ERROR AL OBTENER LOS DATOS", e);
+        }
+      };
     listUser();
   }, []);
 
+  const selectUser = (usuario) => {
+    setSelectedUser(usuario);
+    navigate("/Detalles");
+  };
+
   return (
-    <UserContext.Provider value={{ selectedUser, setselectedUser }}>
+    <UserContext.Provider value={{ selectedUser, setSelectedUser }}>
       <div>
         <table>
           <thead>
@@ -63,4 +65,4 @@ function Usuarios() {
 }
 
 export default Usuarios;
-export { UserContext };
+
