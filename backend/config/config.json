@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "sena",
+    "password": "Darwinlds10#",
     "database": "actividadxd",
     "host": "localhost",
     "dialect": "mysql",
@@ -10,7 +10,7 @@
 
   "test": {
     "username": "root",
-    "password": "sena",
+    "password": "Darwinlds10#",
     "database": "actividadxd",
     "host": "localhost",
     "dialect": "mysql",
@@ -18,7 +18,7 @@
   },
   "production": {
     "username": "root",
-    "password": "sena",
+    "password": "Darwinlds10#",
     "database": "actividadxd",
     "host": "localhost",
     "dialect": "mysql",

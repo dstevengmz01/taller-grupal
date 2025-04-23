@@ -3,7 +3,7 @@ import { useEffect, useState, createContext, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Reserva from "./reserva";
 
-const UserContext = createContext();
+export const UserContext = createContext();
 
 const useUserContext = () => useContext(UserContext);
 
@@ -49,8 +49,6 @@ function Usuarios() {
                 <td>{usuario.id}</td>
                 <td>{usuario.nombre}</td>
                 <td>
-                  <button>Editar</button>
-                  <button>Eliminar</button>
                   <button onClick={() => selectUser(usuario)}>
                     Ver detalles
                   </button>
@@ -59,6 +57,7 @@ function Usuarios() {
             ))}
           </tbody>
         </table>
+        <Reserva />
       </div>
     </UserContext.Provider>
   );
